@@ -6,7 +6,7 @@
 
 Simple drag and drop test
 
-```
+```java
 public class DragAndDropTests {
     @Test
     public void shouldBeSwapped() {
