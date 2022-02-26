@@ -11,9 +11,12 @@ public class DragAndDropTests {
     @Test
     public void shouldBeSwapped() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
-        $("#column-a").dragAndDropTo("column-b");
+        Selenide.sleep(5000);
+        $("#column-a").dragAndDropTo("#column-b");
+        Selenide.sleep(5000);
         $("#column-a").$("header").shouldHave(text("B"));
         $("#column-b").$("header").shouldHave(text("A"));
     }
 }
 ```
+![screencast](src/test/resources/screencast/dragAndDrop.gif)
