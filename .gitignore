@@ -40,3 +40,6 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
+
+# Local Claude Code project memory (not shared)
+CLAUDE.md

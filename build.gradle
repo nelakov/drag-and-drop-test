@@ -2,18 +2,24 @@ plugins {
     id 'java-library'
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     //Selenide
-    testImplementation("com.codeborne:selenide:6.3.2")
-    testRuntimeOnly("org.slf4j:slf4j-simple:1.7.32")
+    testImplementation("com.codeborne:selenide:7.16.2")
+    testRuntimeOnly("org.slf4j:slf4j-simple:2.0.18")
 
-    //JUnit5
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.8.2")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+    //JUnit
+    testImplementation("org.junit.jupiter:junit-jupiter:6.1.0")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:6.1.0")
 }
 
 test {
