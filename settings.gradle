@@ -1,2 +1,8 @@
+plugins {
+    // Lets the Java toolchain auto-download a matching JDK (e.g. Java 25) on
+    // machines/CI that don't have it pre-installed.
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
 rootProject.name = 'drag-and-drop-test'
 
